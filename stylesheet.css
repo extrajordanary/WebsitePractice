@@ -1,9 +1,21 @@
+body {
+	padding: 10px 30px 10px 30px;
+}
+
 h2 {
 	color: maroon;
 	background-color: #eeeeee;
 }
 
-a {
+a, a:visited {
+	color: blue;
+}
+
+a:hover {
+	color: red;
+}
+
+table a, table a:visited {
 	color: maroon;
 }
 
