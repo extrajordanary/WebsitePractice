@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title>CloneDion</title>
+	<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 	<h1>Dion Larson</h1>
-	<img src="http://i.imgur.com/hKvYsVY.jpg">
+	<img src="http://i.imgur.com/hKvYsVY.jpg" id="profile-pic">
 	<h2>About</h2>
 	<p>My name is Dion.</p>
 	<p>I will be teaching you web development for <a href="http://makeschool.com">MakeSchool</a>.</p>
@@ -18,15 +19,15 @@
 			<th>Description</th>
 		</thead>
 		<tr>
-			<td>November</td>
+			<td colspan="3" class="month">November</td>
 		</tr>
-		<tr>
+		<tr id="green-row">
 			<td>11/24 - 11/26</td>
 			<td><a href="http://html.com">HTML</a>, <a href="http://css.com">CSS</a> and <a href="http://jquery.com">jQuery</a></td>
 			<td>Webpages and interaction</td>
 		</tr>
 		<tr>
-			<td>December</td>
+			<td colspan="3" class="month">December</td>
 		</tr>
 		<tr>
 			<td>12/1 - 12/5</td>
@@ -44,6 +45,6 @@
 		</tr>
 	</table>
 	<h2>Interests</h2>
-	<p>Outside of teaching, my interests are Super Smash Bros., cats, and motorcycles.</p>
+	<p>Outside of teaching, my interests are <span id="smash">Super Smash Bros.</span>, <span id="cats">cats</span>, and <span id="motorcycles">motorcycles</span>.</p>
 </body>
 </html>

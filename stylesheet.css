@@ -1,0 +1,54 @@
+h2 {
+	color: maroon;
+	background-color: #eeeeee;
+}
+
+a {
+	color: maroon;
+}
+
+p, table {
+	font-family: Arial;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, tr, td {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+
+td.month {
+	font-weight: bold;
+	text-align: center;
+	background-color: silver;
+}
+
+span {
+	color: red;
+}
+
+#profile-pic {
+	width: 250px;
+	height: 250px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-radius: 125px;
+	float: right;
+}
+
+#green-row {
+	color: green;
+}
+
+#cats {
+	font-family: "Comic Sans MS";
+}
+
+#smash, #motorcycles {
+	font-family: Impact;
+}
