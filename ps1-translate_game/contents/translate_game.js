@@ -6,5 +6,7 @@ $(function() {
 	var current_dict	= dicts[lang_to][lang_from]; // keys: words in @lang_to, values: corresponding words in @lang_from 	
 
 	// Your code here
+	$(".from-lang").html(lang_from);
+	$(".to-lang").html(lang_to);
 
     });

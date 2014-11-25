@@ -6,7 +6,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Ready, Set, Translate !</title>
+    <title>Such Translate</title>
     <link type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
     <link type="text/css" href="translate_game.css" rel="stylesheet" />
 
@@ -17,20 +17,20 @@
 
   </head>
   <body>
-    <!-- Your HTML here -->
-    <h1>Translate from <span id="spanish">Spanish</span> to <span id="english">English</span></h1>
+    <h1>Translate from <span class="from-lang">Martian</span> to <span class="to-lang">Greek</span></h1>
     <div class="game-table">
         <div class="game-row" id="table-header">
             <div class="leftcol">
-              <p>Spanish</p>
+              <p class="from-lang">Martian</p>
             </div>
             <div class="middlecol">
-              <p>English</p>
+              <p class="to-lang">Greek</p>
             </div>
             <div class="rightcol">
               <p>Answer</p>
             </div>
         </div>
+        <!-- /header row -->
         <div class="game-row" id="answer">
             <div class="leftcol" id="target-word">
               <p>espejo</p>
@@ -44,20 +44,31 @@
               <button type="button">See Answer</button>
             </div>
         </div>
-        <div class="game-row" id="results">
+        <!-- /answer row -->
+        <div class="game-row results">
             <div class="leftcol">
               <p class="correct-answer">calabaza</p>
-              <p class="wrong-answer">postmodernidad</p>
             </div>
             <div class="middlecol">
               <p class="correct-answer">pumpkin</p>
-              <p class="wrong-answer">phone</p>
             </div>
             <div class="rightcol">
               <p class="checkmark">&#x2713;</p>
+            </div>
+        </div>
+        <!-- /results row1 -->
+        <div class="game-row results">
+            <div class="leftcol">
+              <p class="wrong-answer">postmodernidad</p>
+            </div>
+            <div class="middlecol">
+              <p class="wrong-answer">phone</p>
+            </div>
+            <div class="rightcol">
               <p class="wrong-answer">postmodernism</p>              
             </div>
         </div>
+        <!-- /results row2 -->
     </div>
   </body>
 </html>
