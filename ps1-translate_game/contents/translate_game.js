@@ -15,9 +15,8 @@ $(function() {
 
 	// clear input, refocus, change target when clicked
 	$("button").click(function() {
-		newQuestion();
+		scoreAnswer();
 	});
-
 });
 
 function updateWordArrays() {
@@ -48,6 +47,54 @@ function newQuestion() {
 	$("#target-word").html(target_word);
 
 	resetInput();
+}
+
+function scoreAnswer() {
+	// correct or not?
+	var playerAnswer = $("input").val();
+	var correctness;
+	if (playerAnswer === answer_word) {
+		correctness = "correct-answer";
+	} else {
+		correctness = "wrong-answer";
+	};
+
+	// create new row to insert
+	var p1 = $("<p>")
+		.attr("class", correctness)
+		.html(target_word);
+	var col1 = $("<div>")
+		.attr("class", "leftcol");
+	col1.append(p1);
+
+	var p2 = $("<p>")
+		.attr("class", correctness)
+		.html(playerAnswer);
+	var col2 = $("<div>")
+		.attr("class", "middlecol");
+	col2.append(p2);
+
+	var p3 = $("<p>")
+		.attr("class", correctness)
+		.html(answer_word);
+	var col3 = $("<div>")
+		.attr("class", "rightcol");
+	col3.append(p3);
+
+	var newRow = $("<div></div>");
+
+	newRow.attr("class", "game-row results");
+	newRow.append(col1);
+	newRow.append(col2);
+	newRow.append(col3);
+
+    newRow.insertAfter("#answer");
+
+	newQuestion();
+}
+
+function compareWords ( wordOne, wordTwo ) {
+	
 }
 
 
