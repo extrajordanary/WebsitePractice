@@ -44,7 +44,7 @@ function resetInput() {
 function newQuestion() {
 	updateWordPair();
 
-	$("#target-word").html(target_word);
+	$("#target-word").html("<p>"+target_word+"</p>");
 
 	resetInput();
 }
@@ -62,21 +62,25 @@ function scoreAnswer() {
 	// create new row to insert
 	var p1 = $("<p>")
 		.attr("class", correctness)
-		.html(target_word);
+		.html("<p>"+target_word+"</p>");
 	var col1 = $("<div>")
 		.attr("class", "leftcol");
 	col1.append(p1);
 
 	var p2 = $("<p>")
 		.attr("class", correctness)
-		.html(playerAnswer);
+		.html("<p>"+playerAnswer+"</p>");
 	var col2 = $("<div>")
 		.attr("class", "middlecol");
 	col2.append(p2);
 
 	var p3 = $("<p>")
 		.attr("class", correctness)
-		.html(answer_word);
+		.html("<p>"+answer_word+"</p>");
+	if (correctness === "correct-answer") {
+		p3.attr("class", "checkmark");
+		p3.html("<p>&#x2713;</p>");
+	};
 	var col3 = $("<div>")
 		.attr("class", "rightcol");
 	col3.append(p3);
@@ -88,13 +92,11 @@ function scoreAnswer() {
 	newRow.append(col2);
 	newRow.append(col3);
 
+	// insert new row at the top of results list
     newRow.insertAfter("#answer");
 
 	newQuestion();
 }
 
-function compareWords ( wordOne, wordTwo ) {
-	
-}
 
 
