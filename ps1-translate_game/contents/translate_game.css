@@ -1,0 +1,83 @@
+html {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 24px;
+    background-color: #EEEEEE;
+}
+
+body {
+	margin: 0px 30px 10px 30px;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: normal;
+	color: #808080;
+}
+
+p {
+	margin: 0px 0px 0px 0px;
+}
+
+input {
+	width: inherit;
+	height: 20px;
+	border-radius: 3px;
+	border-color: #808080;
+	border-width: 1px;
+}
+
+button {
+	background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+	border-radius: 3px;
+	border-width: 1px;
+}
+
+.game-table {
+	display: table;
+}
+
+.game-row {
+	display: table-row;
+}	
+
+.leftcol, .middlecol, .rightcol {
+	display: table-cell;
+	padding: 0px 30px 0px 0px;
+}
+
+.correct-answer {
+	color: blue;
+}
+
+.wrong-answer {
+	color: red;
+}
+
+#spanish, #english {
+	color: black;
+}
+
+#table-header p {
+	color: #808080;
+	padding-bottom: 8px;
+	font-weight: bold;}
+
+#target-word {
+	font-weight: bold;
+}
+
+#answer p {
+	padding-bottom: 14px;
+}
+
+#results p {
+	padding: 5px 0px 0px 0px;
+}
+
+#checkmark {
+	color: black;
+}
+
+.middlecol .wrong-answer {
+	text-decoration: line-through;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+   COLLABORATORS:
+   
+  -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ready, Set, Translate !</title>
+    <link type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link type="text/css" href="translate_game.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script type="text/javascript" src="dicts.json"></script>
+    <script type="text/javascript" src="translate_game.js"></script>
+
+  </head>
+  <body>
+    <!-- Your HTML here -->
+    <h1>Translate from <span id="spanish">Spanish</span> to <span id="english">English</span></h1>
+    <div class="game-table">
+        <div class="game-row" id="table-header">
+            <div class="leftcol">
+              <p>Spanish</p>
+            </div>
+            <div class="middlecol">
+              <p>English</p>
+            </div>
+            <div class="rightcol">
+              <p>Answer</p>
+            </div>
+        </div>
+        <div class="game-row" id="answer">
+            <div class="leftcol" id="target-word">
+              <p>espejo</p>
+            </div>
+            <div class="middlecol" id="player-answer">
+              <form>
+                <input type="text" name="playeranswer">
+              </form>
+            </div>
+            <div class="rightcol">
+              <button type="button">See Answer</button>
+            </div>
+        </div>
+        <div class="game-row" id="results">
+            <div class="leftcol">
+              <p class="correct-answer">calabaza</p>
+              <p class="wrong-answer">postmodernidad</p>
+            </div>
+            <div class="middlecol">
+              <p class="correct-answer">pumpkin</p>
+              <p class="wrong-answer">phone</p>
+            </div>
+            <div class="rightcol">
+              <p class="checkmark">&#x2713;</p>
+              <p class="wrong-answer">postmodernism</p>              
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
