@@ -16,7 +16,7 @@ $(function() {
 	// clear input, refocus, change target when clicked
 	$("button").on("click", scoreAnswer);
 	$("#text-field").on("submit", function() {
-		scoreAnswer();
+		selectionMade();
 		return false;
 	});
 });
@@ -39,8 +39,16 @@ function updateWordPair() {
 
 function updateAutocomplete() {
 	$("#autocomplete").autocomplete({
-	  source: answer_words
+	  source: answer_words,
+	  minLength: 2,
+	  select: selectionMade
 	});
+}
+
+// works from hitting enter but not from autocomplete selection
+function selectionMade() {
+	$("#autocomplete").autocomplete("close");
+	scoreAnswer();
 }
 
 function resetInput() {
