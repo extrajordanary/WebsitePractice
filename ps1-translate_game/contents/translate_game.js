@@ -49,6 +49,7 @@ function updateAutocomplete() {
 function selectionMade() {
 	$("#autocomplete").autocomplete("close");
 	scoreAnswer();
+	return false;
 }
 
 function resetInput() {
