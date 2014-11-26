@@ -14,8 +14,10 @@ $(function() {
 	newQuestion();
 
 	// clear input, refocus, change target when clicked
-	$("button").click(function() {
+	$("button").on("click", scoreAnswer);
+	$("#text-field").on("submit", function() {
 		scoreAnswer();
+		return false;
 	});
 });
 
@@ -23,7 +25,9 @@ function updateWordArrays() {
 	// create arrays for the selected language dictionaries
 	target_words = $.map(current_dict, function (value, key) { return value; });
 	answer_words = $.map(current_dict, function (value, key) { return key; });
-	return 1; 
+
+	// update autocomplete to make sure it uses the right options
+	updateAutocomplete();
 }
 
 function updateWordPair() {
@@ -31,6 +35,12 @@ function updateWordPair() {
     var randomNumber = [Math.floor(Math.random() * answer_words.length)];
 	target_word = target_words[randomNumber];
 	answer_word = answer_words[randomNumber];
+}
+
+function updateAutocomplete() {
+	$("#autocomplete").autocomplete({
+	  source: answer_words
+	});
 }
 
 function resetInput() {
